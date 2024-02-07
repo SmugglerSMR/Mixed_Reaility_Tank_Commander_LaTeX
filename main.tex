@@ -1,0 +1,47 @@
+\documentclass[a4paper, twoside]{report}
+\input{preamble.tex}
+
+\title{Tank Commander Mixed Reality Simulation}
+\author{Marat (Matt) Sadykov}
+
+\begin{document}
+\input{title/title.tex}
+
+\begin{abstract}
+The project described in this report is aimed to provide an overview of a simulation tank commander game over a year of work.
+It includes some project definitions used in the semester one Progress Report and builds on top of the same report from semester two.
+It also provides additional possibilities, which may open a new investigation area for other researchers, such as parallelising specific jobs using the NVIDIA CUDA Library. \\     
+The goal is to develop a Mixed Reality (MR) simulation, linked to $1/16^{th}$ scaled tank model, which is controlled by a wireless joystick and connected to $360\circ$ constantly streaming camera. Video output is meant to be processed inside the Unity Game Engine, enabling additional computational possibilities.
+Using Unity Environment to create a Virtual World, an entirely new simulation will present a uniquely immersive experience of the tank commander.
+The camera, located on top of the tank, will help reconstruct the surrounding environment and detect potential targets using a certain degree of Machine Learning (ML). \\[1pt]
+In addition to MR implementation, the project aims to investigate the full potential of Unity environment processing abilities in Object Detection and improve performance with CUDA Library and additional TensorFlow processing.
+With its Machine Learning (ML) model, Game Engine should be capable of identifying opponents tanks.
+As a potential possibility, the project may set new goals for other developers to wait until specific progress is made in innovation and build on top of it.
+The goal of the final product was simplified to bring an immersive first-person single-player tank commander game using Augmented Reality (AR) in a close-quarters arena.
+\end{abstract}
+
+% \renewcommand{\abstractname}{Acknowledgements}
+% \begin{abstract}
+% It is usual to thank those individuals who have provided particularly useful assistance, technical or otherwise, during your project.
+% \textbf{Additional features:}
+% \textbf{InvokeRepeat and Cancel Repeat., Taking scrennshot in particular resolution. Canvas in VR. Adapted tank from Rodney. LED acted according to direction.}
+% \textbf{TODO: Add mechanincs of mving. ROtationg turret and shooting. Train ML model}
+% \end{abstract}
+
+\tableofcontents
+\listoffigures
+%\listoftables
+\input{introduction/introduction.tex}
+\input{background/background.tex}
+\input{project/project.tex}
+\input{evaluation/evaluation.tex}
+\input{conclusion/conclusion.tex}
+
+\bibliographystyle{unsrt}
+%\bibliographystyle{referencing/IEEEtran}
+\bibliography{referencing/referenceList}
+\addcontentsline{toc}{chapter}{Bibliography}
+
+\input{appendix/appendix.tex}
+
+\end{document}

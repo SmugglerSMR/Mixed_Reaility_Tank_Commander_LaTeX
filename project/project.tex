@@ -1,0 +1,51 @@
+\chapter{Research Progress \& Results}
+Following the previous section, this part is dedicated to reporting the progress of implementation by splitting into four stages of work.
+The reasons behind the structure are to create consistent in the most relevant information without repeating the same topic.
+They meant to create a proper way of describing the workflow and bring a better understanding of the task in hand.
+They summarise findings and achievements upon expansion and modification based on discoveries and implementations in the future.
+\begin{multicols}{2}
+\begin{enumerate}
+    \item \textit{Investigate}
+    \item \textit{Integrating}
+    \item \textit{Designing}
+    \item \textit{Testing}
+\end{enumerate}
+\end{multicols}
+Also, it aimed to present current findings and missing components that are left for investigation. \\
+The Software Developer experience tells that to finish project successfully, it meant to be divided into Agile phases of development.
+\input{project/subsections/investigation.tex}
+\input{project/subsections/integration.tex}
+\input{project/subsections/designing.tex}
+\subsection{Testing}
+Since the actual tank model was damaged and remained in a disassembled state, the project required other manners to test functionality.
+\subsubsection{Testing Environment}
+The Engineering Laboratory at QUT S block Level 9 had such a testing area for robotics students.
+It is a small surrounding area with a field of 2 by 2 meters.
+By printing a few images of the tank and sticking them to the walls or portable paper points, this testing area may create a sufficient environment.
+The idea was to record a testing video with a 360-degree camera and move it manually around the testing area, as well as targets.
+This way, at least some kind of action will be used within the simulation.\\[1pt]
+\subsubsection{Simulating Tank Movement}
+In order to test how the controller behaves with Unity, a small testing circuit with a straightforward Python script was developed within SPB.
+Figure~\ref{fig:circuit} below represents a very simple circuit for Flashing LED upon calls through \textit{RPi.GPIO} Library.
+Each LED represents one of the directions of the movement, if LED flashes, means tank successfully on the move.
+At any point, the user, through console commands, is able to simulate an obstacle, informing that the tank has reached a limit of the arena and should not go any further.
+\begin{figure}[H]
+	\centering        
+	\includegraphics[width=0.75\textwidth]{project/images/circuit-cut.PNG}
+	\caption{Testing LED circuit}
+	\label{fig:circuit}
+\end{figure}
+\subsubsection{Results}
+As a result, a prerecorded video, wirelessly connected Python controller, and HTC Gear create a reasonably reliable simulation within Unity Game Engine.
+The recording of game functionality, ML detection and socket communication was demonstrated on video to the supervisor and will appear in the Final presentation. 
+All Software details will be discussed in the next Prototype section. 
+\subsection{Documentation of Development}
+The final goal of everything is to bring usage for other users and researchers.
+The aim is to set up proper instructions for every part which the project consists of.
+So far, there is a Faster-RCNN architecture that was used to create models for Machine Learning.
+The following link refers to Git Repository projects which are used over TensorFlow usage~\cite{smugglersmr_repository_2018}.\\
+The document also consists of additional instructions for TensorFlow installation and FFmpeg manipulation, presented in this report above. 
+The link to TF website\cite{tensorflow_build_2019}.
+All non-relative code or script can be written by any low-level programmer.
+However, they will still be appended to the Appendix for Reference.
+\input{project/prototype.tex}
